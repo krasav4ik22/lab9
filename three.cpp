@@ -1,8 +1,7 @@
-#include "vector"
 #include <iostream>
 
 template<typename T>
-bool in(T* array, T el, int count) //стргое count 
+bool in(T* array, T el, int count) //count = точное количество существующих элементов
 {
     bool flag = true;
     for (int i = 0; i < count; i++ )
@@ -16,7 +15,7 @@ T* function(T* array, int count){
     T* mass = new T[count];
     int k = 0;
 
-    //Найдём количество различных элементов
+    //Найдём различные элементы
     for(int i = 0; i < count; i++){
         if ( in(mass, array[i], k) )
         {
